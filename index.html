@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>chnaging background color of Navbar when Scroll On</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" ></script>
+  <script>
+    jQuery(function($){
+        var $navbar = $('.header');
+        $(window).scroll(function(event){
+        var $current=$(this).scrollTop();
+        if($current>0){
+            $navbar.addClass('navbar-color');
+
+        }else{
+            $navbar.removeClass('navbar-color');
+        }
+        });
+    });
+    </script>
+</head>
+<body>
+    <div class="background">
+    
+    <div class="header">
+        <div class="header-logo">Prodigy</div>
+        <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        </nav>
+    </div>
+</div>
+</body>
+</html>
